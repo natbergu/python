@@ -1,4 +1,4 @@
-num = input("Enter a binary (base 2) number: ")
+num = input("Enter an unsigned binary (base 2) number: ")
 bin = [int(x) for x in str(num)]
 dec = 0
 for idx, val in enumerate(bin):
