@@ -1,15 +1,15 @@
 while True:
     no = False
     try:
-        num = int(input("Enter an unsigned binary (base 2) number: "))
+        number = int(input("Enter an unsigned binary (base 2) number: "))
     except ValueError:
         print("no.")
         continue
-    if num < 0:
+    if number < 0:
         print("no.")
         continue
     else:
-        for digit in str(num):
+        for digit in str(number):
             if int(digit) > 1 and no == False:
                 print("no.")
                 no = True
@@ -17,8 +17,9 @@ while True:
             break
         else:
             continue
-bin = [int(x) for x in str(num)]
-dec = 0
-for idx, val in enumerate(bin):
-    dec += val * 2 ** (len(bin) - 1 - idx)
-print("Equivalent number in decimal (base 10): " + str(dec))
+
+binary_number = [int(x) for x in str(number)]
+decimal_number = 0
+for index, value in enumerate(binary_number):
+    decimal_number += value * 2 ** (len(binary_number) - 1 - index)
+print("Equivalent number in decimal (base 10): " + str(decimal_number))

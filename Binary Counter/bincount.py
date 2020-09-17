@@ -11,18 +11,17 @@ while True:
         continue
     else:
         break
-overnum = 0
-binlen = 0
-binnum = []
+
+count = 0
 print(0)
-while overnum < (2 ** limit - 1):
-    overnum += 1
-    calcnum = overnum
-    binlen = 1 + math.floor(math.log(calcnum,2))
-    binnum = [0] * binlen
-    for idx, val in enumerate(binnum):
-        slotval = 2 ** (binlen - 1 - idx)
-        if (calcnum - slotval) >= 0:
-            calcnum -= slotval
-            binnum[idx] = 1
-    print("".join(map(str, binnum)))
+while count < (2 ** limit - 1):
+    count += 1
+    calculation_number = count
+    binary_length = 1 + math.floor(math.log(calculation_number,2))
+    binary_number = [0] * binary_length
+    for index, value in enumerate(binary_number):
+        slot_value = 2 ** (binary_length - 1 - index)
+        if (calculation_number - slot_value) >= 0:
+            calculation_number -= slot_value
+            binary_number[index] = 1
+    print("".join(map(str, binary_number)))
